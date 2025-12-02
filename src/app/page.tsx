@@ -18,7 +18,7 @@ export default function Home() {
       <div className="relative z-10">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-4xl">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
             {/* Profile Image */}
             <div className="flex-shrink-0">
@@ -48,7 +48,7 @@ export default function Home() {
                 개발 및 디자인을 할때에는 항상 유저 친화적인 기능과 UI/UX을 먼저 생각합니다.
               </p>
               <div style={{paddingTop:20}}>
-                 <div className="flex gap-6 mb-8">
+                 <div className="flex gap-6 mb-8 justify-center md:justify-start">
                   {/* GitHub */}
                   <a
                     href="https://github.com/iafan1229"
@@ -131,7 +131,8 @@ export default function Home() {
             {/* 헬스로그 */}
             <div>
               <div className="flex flex-col gap-6 mb-6">                 
-                <div className="flex md:flex-row items-start gap-8">
+                <div className="flex flex-col lg:flex-row flex-wrap items-center lg:items-start gap-8 lg:gap-12">
+
                   <div className="text-center md:text-left">
                     <h3 className="text-3xl font-bold mb-3 text-gray-900">헬스로그</h3>
                     <span className="text-lg text-gray-400">2025년 12월 출시</span>
@@ -148,7 +149,7 @@ export default function Home() {
                       <AppStoreButton />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-10">  
+                  <div className="flex flex-col gap-10" style={{overflowX:'scroll'}}>  
                         {/* 배너 이미지 */}
                     <div>
                       <Image
@@ -208,10 +209,9 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900">슈가힐</h3>
                 <span className="text-lg text-gray-400">~2025년 3월까지</span>
               </div>
-              <p className="text-lg text-gray-600 mb-2">프론트엔드 개발자</p>
-           
+          
               <p className="text-lg text-gray-700 leading-relaxed">
-                직방 자회사 슈가힐에서 웹 및 모바일 애플리케이션 개발을 담당하며 사용자 중심의 서비스를 만들기 위해 노력했습니다.
+                직방 자회사 슈가힐에서 프론트엔드 개발자로 웹 및 모바일 개발을 담당하며 사용자 중심의 서비스를 만들기 위해 노력했습니다.
                 <br/>부동산 관련 다양한 웹/앱 프로젝트에 참여하며 프론트엔드 개발 역량을 키웠습니다.
               </p>
             </div>
