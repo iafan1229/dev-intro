@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AppStoreButton from "@/components/AppStoreButton";
+import AndroidStoreButton from "@/components/AndroidStoreButton";
 import dynamic from "next/dynamic";
 
 const GlitterBackground = dynamic(() => import("@/components/Scene3D"), {
@@ -203,10 +204,11 @@ export default function Home() {
                         </span>
                       </div>
                       <div
-                        className='flex justify-center md:justify-start'
+                        className='flex flex-wrap gap-4 justify-center md:justify-start'
                         style={{ paddingTop: 20 }}
                       >
                         <AppStoreButton url='https://apps.apple.com/us/app/%ED%97%AC%EC%8A%A4%EB%A1%9C%EA%B7%B8/id6755720337' />
+                        <AndroidStoreButton url='https://play.google.com/store/apps/details?id=com.soulfitness.workoutlog' />
                       </div>
                     </div>
                     <div
