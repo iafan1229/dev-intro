@@ -10,7 +10,6 @@ export default function PhotoLandingPage() {
   const featureCardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const privacyContentRef = useRef<HTMLDivElement>(null);
 
-  // Navbar scroll effect
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.pageYOffset;
@@ -21,7 +20,6 @@ export default function PhotoLandingPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // IntersectionObserver for feature cards
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
@@ -52,7 +50,6 @@ export default function PhotoLandingPage() {
     };
   }, []);
 
-  // IntersectionObserver for privacy section
   useEffect(() => {
     const privacyContent = privacyContentRef.current;
     if (!privacyContent) return;
@@ -97,7 +94,7 @@ export default function PhotoLandingPage() {
   };
 
   return (
-    <>
+    <div className={styles.pageWrapper}>
       {/* Navigation */}
       <nav
         className={`${styles.navbar} ${
@@ -110,8 +107,8 @@ export default function PhotoLandingPage() {
               <Image
                 src='/img/daylog/logo.png'
                 alt='DayLog'
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className={styles.logoImg}
               />
               <span className={styles.logoText}>DayLog</span>
@@ -141,14 +138,13 @@ export default function PhotoLandingPage() {
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
               <h1 className={styles.heroTitle}>
-                Record your day
-                <br />
-                <span className={styles.highlight}>beautifully</span>
+                Your Daily Story
+                <span className={styles.highlight}>Captured Simply</span>
               </h1>
               <p className={styles.heroDescription}>
-                A privacy-focused diary app that lets you easily record
+                A photo, a few words, your own story.
                 <br />
-                precious moments with photos and text
+                Quietly preserve your precious moments.
               </p>
               <div className={styles.heroButtons}>
                 <Link
@@ -156,7 +152,7 @@ export default function PhotoLandingPage() {
                   className={styles.btnPrimary}
                   onClick={handleAnchorClick}
                 >
-                  Download App
+                  Get Started Free
                 </Link>
                 <Link
                   href='#features'
@@ -173,11 +169,11 @@ export default function PhotoLandingPage() {
                 </div>
                 <div className={styles.statItem}>
                   <div className={styles.statNumber}>0</div>
-                  <div className={styles.statLabel}>Login Required</div>
+                  <div className={styles.statLabel}>No Login Required</div>
                 </div>
                 <div className={styles.statItem}>
-                  <div className={styles.statNumber}>∞</div>
-                  <div className={styles.statLabel}>Privacy</div>
+                  <div className={styles.statNumber}>19+</div>
+                  <div className={styles.statLabel}>Languages</div>
                 </div>
               </div>
             </div>
@@ -185,8 +181,8 @@ export default function PhotoLandingPage() {
               <div className={styles.phoneMockup}>
                 <Image
                   src='/img/daylog/screenshot-ios1.png'
-                  alt='DayLog App'
-                  width={260}
+                  alt='DayLog App Screenshot 1'
+                  width={280}
                   height={560}
                   className={styles.appScreenshot}
                   priority
@@ -195,8 +191,8 @@ export default function PhotoLandingPage() {
               <div className={styles.phoneMockup}>
                 <Image
                   src='/img/daylog/screenshot-ios2.png'
-                  alt='DayLog App'
-                  width={260}
+                  alt='DayLog App Screenshot 2'
+                  width={280}
                   height={560}
                   className={styles.appScreenshot}
                   priority
@@ -211,6 +207,9 @@ export default function PhotoLandingPage() {
       <section id='features' className={styles.features}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Why DayLog?</h2>
+          <p className={styles.sectionSubtitle}>
+            Features that make your daily life more special
+          </p>
           <div className={styles.featuresGrid}>
             <div
               ref={(el) => {
@@ -219,11 +218,10 @@ export default function PhotoLandingPage() {
               className={styles.featureCard}
             >
               <div className={styles.featureIcon}>📸</div>
-              <h3 className={styles.featureTitle}>Photos and Text</h3>
+              <h3 className={styles.featureTitle}>With Photos</h3>
               <p className={styles.featureDescription}>
-                Write your diary with multiple photos and
-                <br />
-                visually record precious moments
+                Write your diary with multiple photos and visually record
+                precious moments
               </p>
             </div>
             <div
@@ -235,9 +233,8 @@ export default function PhotoLandingPage() {
               <div className={styles.featureIcon}>📅</div>
               <h3 className={styles.featureTitle}>Calendar View</h3>
               <p className={styles.featureDescription}>
-                View your diary at a glance with monthly calendar and
-                <br />
-                easily write or read by tapping on dates
+                View your diary at a glance with monthly calendar and easily
+                write or read by tapping on dates
               </p>
             </div>
             <div
@@ -249,9 +246,8 @@ export default function PhotoLandingPage() {
               <div className={styles.featureIcon}>🔍</div>
               <h3 className={styles.featureTitle}>Search and Explore</h3>
               <p className={styles.featureDescription}>
-                Search your diary by keywords or
-                <br />
-                look back at the past with timeline and photo gallery
+                Search your diary by keywords or look back at memories with
+                timeline and gallery
               </p>
             </div>
             <div
@@ -261,11 +257,9 @@ export default function PhotoLandingPage() {
               className={styles.featureCard}
             >
               <div className={styles.featureIcon}>🎨</div>
-              <h3 className={styles.featureTitle}>Customization</h3>
+              <h3 className={styles.featureTitle}>Your Own Style</h3>
               <p className={styles.featureDescription}>
-                Create your own diary app with
-                <br />
-                various themes and text sizes
+                Create your own diary app with various themes and font sizes
               </p>
             </div>
             <div
@@ -277,9 +271,7 @@ export default function PhotoLandingPage() {
               <div className={styles.featureIcon}>☁️</div>
               <h3 className={styles.featureTitle}>Google Drive Backup</h3>
               <p className={styles.featureDescription}>
-                Backup to Google Drive and
-                <br />
-                keep your data safe
+                Backup to Google Drive and keep your precious records safe
               </p>
             </div>
             <div
@@ -291,9 +283,7 @@ export default function PhotoLandingPage() {
               <div className={styles.featureIcon}>🌍</div>
               <h3 className={styles.featureTitle}>Multi-language Support</h3>
               <p className={styles.featureDescription}>
-                Supports 19 languages so you can
-                <br />
-                use it anywhere in the world
+                Supports 19 languages so you can use it anywhere in the world
               </p>
             </div>
           </div>
@@ -305,7 +295,7 @@ export default function PhotoLandingPage() {
         <div className={styles.container}>
           <div ref={privacyContentRef} className={styles.privacyContent}>
             <div className={styles.privacyText}>
-              <h2 className={styles.sectionTitle}>Privacy First</h2>
+              <h2 className={styles.sectionTitle}>Your Own Space</h2>
               <p className={styles.privacyDescription}>
                 DayLog stores your diary completely offline.
                 <br />
@@ -318,7 +308,7 @@ export default function PhotoLandingPage() {
                 </div>
                 <div className={styles.privacyItem}>
                   <span className={styles.privacyCheck}>✓</span>
-                  <span>No login or account required</span>
+                  <span>No login or account creation required</span>
                 </div>
                 <div className={styles.privacyItem}>
                   <span className={styles.privacyCheck}>✓</span>
@@ -340,7 +330,7 @@ export default function PhotoLandingPage() {
       {/* Download Section */}
       <section id='download' className={styles.download}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Get Started</h2>
+          <h2 className={styles.sectionTitle}>Start Today</h2>
           <p className={styles.downloadDescription}>
             Download for free on iOS and Android
           </p>
@@ -350,30 +340,15 @@ export default function PhotoLandingPage() {
               className={styles.downloadBtn}
               target='_blank'
               rel='noopener noreferrer'
-              onClick={handleAnchorClick}
             >
               <Image
                 src='https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&releaseDate=1276560000'
                 alt='Download on the App Store'
-                width={250}
-                height={83}
-                unoptimized
-              />
-            </Link>
-            {/* <a
-              href='https://play.google.com/store/apps/details?id=com.iafan1229.daylog'
-              className={styles.downloadBtn}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Image
-                src='https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png'
-                alt='Google Play에서 다운로드'
-                width={200}
+                width={180}
                 height={60}
                 unoptimized
               />
-            </a> */}
+            </Link>
           </div>
         </div>
       </section>
@@ -386,6 +361,6 @@ export default function PhotoLandingPage() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
