@@ -294,10 +294,11 @@ export default function Home() {
                         </span>
                       </div>
                       <div
-                        className='flex justify-center md:justify-start'
+                        className='flex flex-wrap gap-4 justify-center md:justify-start'
                         style={{ paddingTop: 20 }}
                       >
                         <AppStoreButton url='https://apps.apple.com/us/app/daylog-diary-daily-note/id6756697383' />
+                        <AndroidStoreButton url='https://play.google.com/store/apps/details?id=com.iafan1229.daylog' />
                       </div>
                     </div>
                     <div
