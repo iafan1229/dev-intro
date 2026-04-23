@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '이하영 | 프론트엔드 개발자',
+  title: '하이코드랩 | 웹,앱 전문 개발사',
   description:
-    'Next.js와 React Native를 주로 사용하는 프론트엔드 개발자 이하영의 포트폴리오입니다.',
+    'Next.js와 React Native를 주로 사용하는 웹,앱 전문 개발사 하이코드랩의 포트폴리오입니다.',
 };
 
 export default function RootLayout({

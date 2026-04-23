@@ -24,29 +24,29 @@ export default function Home() {
       >
         {/* Hero Section */}
         <section
-          className='min-h-screen flex items-center justify-center mx-auto px-5 py-16 md:p-20'
+          className='min-h-screen flex items-center justify-center mx-auto px-5 py-16 md:px-10 md:py-20 lg:p-20'
           style={{ maxWidth: '1600px', background: '#fff', textAlign: 'left' }}
         >
-          <div className='container mx-auto px-0 md:px-6'>
-            <div className='flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12'>
+          <div className='container mx-auto px-0 md:px-4 lg:px-6'>
+            <div className='flex flex-col lg:flex-row items-center lg:items-start gap-6 md:gap-10 lg:gap-12'>
               {/* Logo Image */}
-              <div className='flex-shrink-0 md:ml-[50px]'>
+              <div className='flex-shrink-0 lg:ml-[50px]'>
                 <Image
                   src='/img/logo-3.png'
                   alt='이하영 로고'
                   width={300}
                   height={300}
-                  className='rounded-full border-4 border-gray-100 w-32 h-32 md:w-[300px] md:h-[300px]'
+                  className='rounded-full border-4 border-gray-100 w-32 h-32 md:w-52 md:h-52 lg:w-[300px] lg:h-[300px]'
                   priority
                 />
               </div>
 
               {/* Text Content */}
-              <div className='w-full flex-1 text-center md:text-left'>
-                <span className='inline-block text-[10px] md:text-sm font-bold tracking-[0.2em] md:tracking-[0.25em] text-blue-600 mb-4 md:mb-6'>
+              <div className='w-full flex-1 text-center lg:text-left'>
+                <span className='inline-block text-[10px] md:text-xs lg:text-sm font-bold tracking-[0.2em] lg:tracking-[0.25em] text-blue-600 mb-4 md:mb-5 lg:mb-6'>
                   CREATIVE · DEVELOPMENT · PARTNER
                 </span>
-                <h1 className='text-4xl md:text-8xl font-extrabold mb-6 md:mb-8 leading-[1.15] md:leading-[1.05] tracking-tighter'>
+                <h1 className='text-4xl md:text-6xl lg:text-8xl font-extrabold mb-6 md:mb-7 lg:mb-8 leading-[1.15] lg:leading-[1.05] tracking-tighter'>
                   <span className='block text-slate-900'>안녕하세요.</span>
                   <span className='block text-slate-400 mt-1 md:mt-2'>
                     웹,앱 전문 개발사
@@ -55,7 +55,7 @@ export default function Home() {
                     하이코드랩입니다.
                   </span>
                 </h1>
-                <p className='text-sm md:text-2xl text-slate-600 mb-8 md:mb-12 leading-relaxed'>
+                <p className='text-sm md:text-lg lg:text-2xl text-slate-600 mb-8 md:mb-10 lg:mb-12 leading-relaxed'>
                   Next.js와 React Native로 홈페이지와 모바일 앱을 개발합니다.
                   <br className='hidden md:block' />
                   개발 및 디자인을 할때에는 항상 유저 친화적인 기능과 UI/UX을
@@ -63,7 +63,7 @@ export default function Home() {
                 </p>
 
                 {/* CTA */}
-                <div className='flex flex-wrap gap-4 justify-center md:justify-start mb-8 md:mb-16'>
+                <div className='flex flex-wrap gap-4 justify-center lg:justify-start mb-8 md:mb-12 lg:mb-16'>
                   <a
                     href='#projects'
                     className='group inline-flex items-center gap-2 text-slate-900 hover:text-white text-sm md:text-base p-[10px] rounded-full font-semibold hover:bg-blue-600 transition-all duration-300'
@@ -89,7 +89,7 @@ export default function Home() {
 
             {/* Service Cards Strip (plani-style minimal) */}
             <div
-              className='grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 mt-10 md:mt-[50px]'
+              className='grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 mt-10 md:mt-10 lg:mt-[50px]'
               style={{ textAlign: 'center' }}
             >
               {[
@@ -120,20 +120,20 @@ export default function Home() {
               ].map((item, idx) => (
                 <div
                   key={item.label}
-                  className={`group px-3 md:px-10 py-4 md:py-8 ${
+                  className={`group px-3 md:px-5 lg:px-10 py-4 md:py-6 lg:py-8 ${
                     idx !== 0 ? 'md:border-l border-slate-200/70' : ''
                   }`}
                 >
-                  <span className='block text-2xl md:text-4xl font-extrabold text-slate-200 group-hover:text-blue-600 mb-6 md:mb-10 transition-colors'>
+                  <span className='block text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-200 group-hover:text-blue-600 mb-6 md:mb-8 lg:mb-10 transition-colors'>
                     {item.no}
                   </span>
-                  <span className='block text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-blue-600 mb-2 md:mb-4'>
+                  <span className='block text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-blue-600 mb-2 md:mb-3 lg:mb-4'>
                     {item.label}
                   </span>
-                  <h3 className='text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-3'>
+                  <h3 className='text-sm md:text-base lg:text-xl font-bold text-slate-900 mb-1 md:mb-2 lg:mb-3'>
                     {item.title}
                   </h3>
-                  <p className='text-xs md:text-sm text-slate-500 leading-relaxed'>
+                  <p className='text-xs md:text-xs lg:text-sm text-slate-500 leading-relaxed'>
                     {item.desc}
                   </p>
                 </div>
