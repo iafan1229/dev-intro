@@ -18,52 +18,55 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className='relative z-10' style={{ backgroundColor: '#EAF4FF' }}>
+      <div
+        className='relative z-10 pt-20'
+        style={{ backgroundColor: '#EAF4FF' }}
+      >
         {/* Hero Section */}
         <section
-          className='min-h-screen flex items-center justify-center'
+          className='min-h-screen flex items-center justify-center mx-auto px-5 py-16 md:p-20'
           style={{ maxWidth: '1600px', background: '#fff', textAlign: 'left' }}
         >
-          <div className='container mx-auto px-6'>
-            <div className='flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12'>
+          <div className='container mx-auto px-0 md:px-6'>
+            <div className='flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12'>
               {/* Logo Image */}
-              <div className='flex-shrink-0' style={{marginLeft: '50px'}}>
+              <div className='flex-shrink-0 md:ml-[50px]'>
                 <Image
                   src='/img/logo-3.png'
                   alt='이하영 로고'
                   width={300}
                   height={300}
-                  className='rounded-full border-4 border-gray-100'
+                  className='rounded-full border-4 border-gray-100 w-32 h-32 md:w-[300px] md:h-[300px]'
                   priority
                 />
               </div>
 
               {/* Text Content */}
               <div className='w-full flex-1 text-center md:text-left'>
-                <span className='inline-block text-xs md:text-sm font-bold tracking-[0.25em] text-blue-600 mb-6'>
+                <span className='inline-block text-[10px] md:text-sm font-bold tracking-[0.2em] md:tracking-[0.25em] text-blue-600 mb-4 md:mb-6'>
                   CREATIVE · DEVELOPMENT · PARTNER
                 </span>
-                <h1 className='text-6xl md:text-8xl font-extrabold mb-8 leading-[1.05] tracking-tighter'>
+                <h1 className='text-4xl md:text-8xl font-extrabold mb-6 md:mb-8 leading-[1.15] md:leading-[1.05] tracking-tighter'>
                   <span className='block text-slate-900'>안녕하세요.</span>
-                  <span className='block text-slate-400 mt-2'>
+                  <span className='block text-slate-400 mt-1 md:mt-2'>
                     웹,앱 전문 개발사
                   </span>
-                  <span className='block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-blue-600'>
+                  <span className='block mt-1 md:mt-2 bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-700 to-blue-600'>
                     하이코드랩입니다.
                   </span>
                 </h1>
-                <p className='text-lg md:text-2xl text-slate-600 mb-12 leading-relaxed'>
+                <p className='text-sm md:text-2xl text-slate-600 mb-8 md:mb-12 leading-relaxed'>
                   Next.js와 React Native로 홈페이지와 모바일 앱을 개발합니다.
-                  <br />
+                  <br className='hidden md:block' />
                   개발 및 디자인을 할때에는 항상 유저 친화적인 기능과 UI/UX을
                   먼저 생각합니다.
                 </p>
 
                 {/* CTA */}
-                <div className='flex flex-wrap gap-4 justify-center md:justify-start mb-16'>
+                <div className='flex flex-wrap gap-4 justify-center md:justify-start mb-8 md:mb-16'>
                   <a
                     href='#projects'
-                    className='group inline-flex items-center gap-2 text-slate-900 hover:text-white p-[10px] rounded-full font-semibold hover:bg-blue-600 transition-all duration-300'
+                    className='group inline-flex items-center gap-2 text-slate-900 hover:text-white text-sm md:text-base p-[10px] rounded-full font-semibold hover:bg-blue-600 transition-all duration-300'
                   >
                     <span>프로젝트 보기</span>
                     <svg
@@ -85,7 +88,10 @@ export default function Home() {
             </div>
 
             {/* Service Cards Strip (plani-style minimal) */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-y-14 md:gap-y-0' style={{marginTop: '50px', textAlign:'center'}}>
+            <div
+              className='grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 mt-10 md:mt-[50px]'
+              style={{ textAlign: 'center' }}
+            >
               {[
                 {
                   no: '01',
@@ -114,20 +120,20 @@ export default function Home() {
               ].map((item, idx) => (
                 <div
                   key={item.label}
-                  className={`group px-6 md:px-10 py-6 md:py-8 ${
+                  className={`group px-3 md:px-10 py-4 md:py-8 ${
                     idx !== 0 ? 'md:border-l border-slate-200/70' : ''
                   }`}
                 >
-                  <span className='block text-4xl font-extrabold text-slate-200 group-hover:text-blue-600 mb-10 transition-colors'>
+                  <span className='block text-2xl md:text-4xl font-extrabold text-slate-200 group-hover:text-blue-600 mb-6 md:mb-10 transition-colors'>
                     {item.no}
                   </span>
-                  <span className='block text-[11px] font-bold tracking-[0.2em] text-blue-600 mb-4'>
+                  <span className='block text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-blue-600 mb-2 md:mb-4'>
                     {item.label}
                   </span>
-                  <h3 className='text-lg md:text-xl font-bold text-slate-900 mb-3'>
+                  <h3 className='text-sm md:text-xl font-bold text-slate-900 mb-1 md:mb-3'>
                     {item.title}
                   </h3>
-                  <p className='text-sm text-slate-500 leading-relaxed'>
+                  <p className='text-xs md:text-sm text-slate-500 leading-relaxed'>
                     {item.desc}
                   </p>
                 </div>
@@ -137,7 +143,7 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id='about' className='border-t border-slate-200 py-24'>
+        <section id='about' className='py-24 bg-white mt-20 mb-20'>
           <div className='container mx-auto px-6 max-w-6xl'>
             <div className='flex flex-col md:flex-row items-center gap-10 md:gap-20'>
               {/* Illustration */}
@@ -178,7 +184,10 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section id='skills' className='border-t border-slate-200 py-24'>
+        <section
+          id='skills'
+          className='border-t border-slate-200 py-24 bg-white'
+        >
           <div className='container mx-auto px-6 max-w-6xl'>
             <div className='mb-16 text-center md:text-left'>
               <span className='inline-block text-xs font-bold tracking-[0.25em] text-blue-600 mb-4'>
@@ -261,7 +270,7 @@ export default function Home() {
 
             <div className='space-y-12'>
               {/* 헬스로그 */}
-              <div className='bg-slate-50/60 rounded-3xl p-12 md:p-20 hover:bg-white hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
+              <div className='rounded-3xl p-12 md:p-20 bg-white hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
                 <div className='flex flex-col'>
                   <div className='flex flex-col lg:flex-row flex-wrap items-center lg:items-start gap-12 lg:gap-20'>
                     <div className='text-center md:text-left flex-shrink-0 lg:max-w-sm'>
@@ -275,8 +284,7 @@ export default function Home() {
                         2025년 12월 출시
                       </span>
                       <p className='text-base text-slate-600 leading-relaxed mt-10'>
-                        운동 기록을 쉽고 간편하게 관리할 수 있는 피트니스
-                        앱입니다.
+                        운동 기록을 쉽고 간편하게 관리할 수 있는 피트니스 앱.
                         <br />
                         직관적인 UI/UX로 누구나 쉽게 사용할 수 있으며, <br />
                         운동 루틴을 체계적으로 관리할 수 있습니다.
@@ -348,7 +356,7 @@ export default function Home() {
               </div>
 
               {/* 데이로그 */}
-              <div className='bg-slate-50/60 rounded-3xl p-12 md:p-20 hover:bg-white hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
+              <div className='bg-white rounded-3xl p-12 md:p-20 hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
                 <div className='flex flex-col'>
                   <div className='flex flex-col lg:flex-row flex-wrap items-center lg:items-start gap-12 lg:gap-20'>
                     <div className='text-center md:text-left flex-shrink-0 lg:max-w-sm'>
@@ -539,7 +547,7 @@ export default function Home() {
                 © 2026 하이코드랩. All rights reserved.
               </p>
               <div className='flex gap-6'>
-                <a
+                {/* <a
                   href='https://github.com/iafan1229'
                   target='_blank'
                   rel='noopener noreferrer'
@@ -562,7 +570,7 @@ export default function Home() {
                   className='text-sm text-slate-400 hover:text-slate-900 transition-colors'
                 >
                   LinkedIn
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
