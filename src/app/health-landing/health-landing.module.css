@@ -1,5 +1,5 @@
 /* Import fonts */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 
 /* CSS Variables */
 :root {
@@ -19,8 +19,8 @@
     #ffb347 100%
   );
   --gradient-dark: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
-  --font-display: "Bebas Neue", "Noto Sans KR", sans-serif;
-  --font-body: "Noto Sans KR", sans-serif;
+  --font-display: 'Bebas Neue', 'Noto Sans KR', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
 }
 
 /* Base & Page Wrapper */
@@ -89,7 +89,7 @@
 }
 
 .logoGlow::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: -4px;
   background: var(--gradient-fire);
@@ -139,7 +139,7 @@
 }
 
 .navMenu a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -456,7 +456,7 @@
 }
 
 .btnPrimary::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -971,7 +971,8 @@
 .statsOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 61, 0, 0.1) 0%, transparent 50%),
+  background:
+    linear-gradient(135deg, rgba(255, 61, 0, 0.1) 0%, transparent 50%),
     linear-gradient(225deg, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -1098,7 +1099,8 @@
 .downloadGrid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 61, 0, 0.03) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(255, 61, 0, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 61, 0, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -19,7 +19,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans:
+    'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 * {
@@ -31,7 +32,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    'Noto Sans KR',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
   letter-spacing: -0.02em;
@@ -39,9 +45,13 @@ body {
   font-weight: 400;
 }
 
-
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.2;
@@ -70,8 +80,8 @@ p {
 
 /* Sections */
 section {
-  padding: 120px 24px;
-  max-width: 1200px;
+  padding: 60px 24px;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 
@@ -79,15 +89,15 @@ section {
   h1 {
     font-size: 2.5rem;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
-  
+
   h3 {
     font-size: 1.5rem;
   }
-  
+
   section {
     padding: 80px 20px;
   }
@@ -137,4 +147,3 @@ a:hover {
 .thin-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--gray-400);
 }
-

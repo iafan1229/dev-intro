@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface AndroidStoreButtonProps {
   url: string;
@@ -20,5 +20,3 @@ export default function AndroidStoreButton({ url }: AndroidStoreButtonProps) {
     </a>
   );
 }
-
-

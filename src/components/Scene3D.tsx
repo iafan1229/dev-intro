@@ -93,7 +93,7 @@ export default function GlitterBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full"
+      className='w-full h-full'
       style={{ background: 'transparent' }}
     />
   );

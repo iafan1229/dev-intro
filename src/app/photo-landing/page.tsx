@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./photo-landing.module.css";
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './photo-landing.module.css';
 
 export default function PhotoLandingPage() {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
@@ -16,14 +16,14 @@ export default function PhotoLandingPage() {
       setNavbarScrolled(currentScroll > 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      rootMargin: '0px 0px -50px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -56,7 +56,7 @@ export default function PhotoLandingPage() {
 
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      rootMargin: '0px 0px -50px 0px',
     };
 
     const privacyObserver = new IntersectionObserver((entries) => {
@@ -79,15 +79,15 @@ export default function PhotoLandingPage() {
   const handleAnchorClick = (
     e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>
   ) => {
-    const href = e.currentTarget.getAttribute("href");
-    if (href?.startsWith("#")) {
+    const href = e.currentTarget.getAttribute('href');
+    if (href?.startsWith('#')) {
       e.preventDefault();
       const targetElement = document.querySelector(href);
       if (targetElement) {
         const offsetTop = (targetElement as HTMLElement).offsetTop - 80;
         window.scrollTo({
           top: offsetTop,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
       }
     }
@@ -98,7 +98,7 @@ export default function PhotoLandingPage() {
       {/* Navigation */}
       <nav
         className={`${styles.navbar} ${
-          navbarScrolled ? styles.navbarScrolled : ""
+          navbarScrolled ? styles.navbarScrolled : ''
         }`}
       >
         <div className={styles.container}>

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState, useCallback } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./health-landing.module.css";
+import { useEffect, useRef, useState, useCallback } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './health-landing.module.css';
 
 export default function HealthLandingPage() {
   const [headerScrolled, setHeaderScrolled] = useState(false);
@@ -20,7 +20,7 @@ export default function HealthLandingPage() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
@@ -28,7 +28,7 @@ export default function HealthLandingPage() {
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener('resize', resizeCanvas);
 
     const particles: {
       x: number;
@@ -80,7 +80,7 @@ export default function HealthLandingPage() {
           0.5,
           `rgba(255, 107, 53, ${particle.opacity * 0.5})`
         );
-        gradient.addColorStop(1, "rgba(255, 61, 0, 0)");
+        gradient.addColorStop(1, 'rgba(255, 61, 0, 0)');
 
         ctx.beginPath();
         ctx.arc(
@@ -99,7 +99,7 @@ export default function HealthLandingPage() {
     animate();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
   }, []);
@@ -113,8 +113,8 @@ export default function HealthLandingPage() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [handleMouseMove]);
 
   // Header scroll effect
@@ -124,14 +124,14 @@ export default function HealthLandingPage() {
       setHeaderScrolled(currentScroll > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Smooth scroll for anchor links
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const href = e.currentTarget.getAttribute("href");
-    if (href?.startsWith("#")) {
+    const href = e.currentTarget.getAttribute('href');
+    if (href?.startsWith('#')) {
       e.preventDefault();
       const targetElement = document.querySelector(href);
       if (targetElement) {
@@ -142,7 +142,7 @@ export default function HealthLandingPage() {
           headerHeight;
         window.scrollTo({
           top: offsetTop,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
       }
       setNavMenuActive(false);
@@ -153,7 +153,7 @@ export default function HealthLandingPage() {
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      rootMargin: '0px 0px -50px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -184,7 +184,7 @@ export default function HealthLandingPage() {
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
+      rootMargin: '0px 0px -50px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -224,13 +224,13 @@ export default function HealthLandingPage() {
         }
 
         if (target >= 1000) {
-          element.textContent = Math.floor(current / 1000) + "K+";
+          element.textContent = Math.floor(current / 1000) + 'K+';
         } else if (target === 4.8) {
           element.textContent = current.toFixed(1);
         } else if (target === 100) {
-          element.textContent = Math.floor(current) + "%";
+          element.textContent = Math.floor(current) + '%';
         } else {
-          element.textContent = Math.floor(current) + "+";
+          element.textContent = Math.floor(current) + '+';
         }
       }, 25);
     };
@@ -281,7 +281,7 @@ export default function HealthLandingPage() {
       {/* Header */}
       <header
         className={`${styles.header} ${
-          headerScrolled ? styles.headerScrolled : ""
+          headerScrolled ? styles.headerScrolled : ''
         }`}
       >
         <nav className={`${styles.nav} ${styles.container}`}>
@@ -299,7 +299,7 @@ export default function HealthLandingPage() {
           </Link>
           <ul
             className={`${styles.navMenu} ${
-              navMenuActive ? styles.navMenuActive : ""
+              navMenuActive ? styles.navMenuActive : ''
             }`}
           >
             <li>
@@ -327,7 +327,7 @@ export default function HealthLandingPage() {
           </Link>
           <button
             className={`${styles.navToggle} ${
-              navMenuActive ? styles.navToggleActive : ""
+              navMenuActive ? styles.navToggleActive : ''
             }`}
             aria-label='Open menu'
             onClick={() => setNavMenuActive(!navMenuActive)}
