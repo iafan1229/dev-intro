@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '하이코드랩 | 웹,앱 전문 개발사',
+  title: '포트폴리오',
   description:
-    'Next.js와 React Native를 주로 사용하는 웹,앱 전문 개발사 하이코드랩의 포트폴리오입니다.',
+    'Next.js와 React Native를 주로 사용하는 포트폴리오입니다.',
 };
 
 export default function RootLayout({
@@ -24,8 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='ko'>
+    <html lang='ko' suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
