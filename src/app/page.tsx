@@ -33,10 +33,10 @@ export default function Home() {
 
               <div className='space-y-12'>
                 {/* 헬스로그 */}
-                <div className='rounded-3xl p-12 md:p-20 bg-white hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
+                <div className='rounded-3xl p-6 md:p-12 lg:p-20 bg-white hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
                   <div className='flex flex-col'>
-                    <div className='flex flex-col lg:flex-row flex-wrap items-center lg:items-start gap-12 lg:gap-20'>
-                      <div className='text-center md:text-left flex-shrink-0 lg:max-w-sm'>
+                    <div className='flex flex-col lg:flex-row flex-wrap items-stretch lg:items-start gap-12 lg:gap-20'>
+                      <div className='w-full text-center md:text-left flex-shrink-0 lg:max-w-sm'>
                         <span className='inline-block text-xs font-bold tracking-[0.2em] text-blue-600 mb-6'>
                           PROJECT 01 · FITNESS
                         </span>
@@ -75,12 +75,9 @@ export default function Home() {
                           <AndroidStoreButton url='https://play.google.com/store/apps/details?id=com.soulfitness.workoutlog' />
                         </div>
                       </div>
-                      <div
-                        className='flex flex-col gap-6 flex-1 thin-scrollbar'
-                        style={{ overflowX: 'auto' }}
-                      >
+                      <div className='w-full min-w-0 flex flex-col gap-6 lg:flex-1'>
                         {/* 배너 이미지 */}
-                        <div>
+                        <div className='w-full'>
                           <Image
                             src='/img/banner.png'
                             alt='헬스로그 배너'
@@ -90,28 +87,30 @@ export default function Home() {
                           />
                         </div>
                         {/* 앱 스크린샷들 */}
-                        <div className='flex gap-4 justify-center'>
-                          <Image
-                            src='/img/app.png'
-                            alt='헬스로그 앱 스크린샷 1'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
-                          <Image
-                            src='/img/app-2.png'
-                            alt='헬스로그 앱 스크린샷 2'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
-                          <Image
-                            src='/img/app-3.png'
-                            alt='헬스로그 앱 스크린샷 3'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
+                        <div className='overflow-x-auto pb-2 thin-scrollbar'>
+                          <div className='flex w-max min-w-full gap-4 justify-center'>
+                            <Image
+                              src='/img/app.png'
+                              alt='헬스로그 앱 스크린샷 1'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                            <Image
+                              src='/img/app-2.png'
+                              alt='헬스로그 앱 스크린샷 2'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                            <Image
+                              src='/img/app-3.png'
+                              alt='헬스로그 앱 스크린샷 3'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -119,10 +118,10 @@ export default function Home() {
                 </div>
 
                 {/* 데이로그 */}
-                <div className='bg-white rounded-3xl p-12 md:p-20 hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
+                <div className='bg-white rounded-3xl p-6 md:p-12 lg:p-20 hover:shadow-[0_1px_30px_rgba(15,23,42,0.06)] transition-all duration-300'>
                   <div className='flex flex-col'>
-                    <div className='flex flex-col lg:flex-row flex-wrap items-center lg:items-start gap-12 lg:gap-20'>
-                      <div className='text-center md:text-left flex-shrink-0 lg:max-w-sm'>
+                    <div className='flex flex-col lg:flex-row flex-wrap items-stretch lg:items-start gap-12 lg:gap-20'>
+                      <div className='w-full text-center md:text-left flex-shrink-0 lg:max-w-sm'>
                         <span className='inline-block text-xs font-bold tracking-[0.2em] text-blue-600 mb-6'>
                           PROJECT 02 · DIARY
                         </span>
@@ -168,12 +167,9 @@ export default function Home() {
                           <AndroidStoreButton url='https://play.google.com/store/apps/details?id=com.iafan1229.daylog' />
                         </div>
                       </div>
-                      <div
-                        className='flex flex-col gap-6 flex-1 thin-scrollbar'
-                        style={{ overflowX: 'auto' }}
-                      >
+                      <div className='w-full min-w-0 flex flex-col gap-6 lg:flex-1'>
                         {/* 배너 이미지 */}
-                        <div>
+                        <div className='w-full'>
                           <Image
                             src='/img/daylog/banner.png'
                             alt='데이로그 배너'
@@ -183,35 +179,37 @@ export default function Home() {
                           />
                         </div>
                         {/* 앱 스크린샷들 */}
-                        <div className='flex gap-4 justify-center'>
-                          <Image
-                            src='/img/daylog/screenshot-ios1.png'
-                            alt='데이로그 앱 스크린샷 1'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
-                          <Image
-                            src='/img/daylog/screenshot-ios2.png'
-                            alt='데이로그 앱 스크린샷 2'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
-                          <Image
-                            src='/img/daylog/screenshot-ios3.png'
-                            alt='데이로그 앱 스크린샷 3'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
-                          <Image
-                            src='/img/daylog/screenshot-ios4.png'
-                            alt='데이로그 앱 스크린샷 4'
-                            width={160}
-                            height={160}
-                            className='rounded-2xl border border-slate-200 shadow-sm'
-                          />
+                        <div className='overflow-x-auto pb-2 thin-scrollbar'>
+                          <div className='flex w-max min-w-full gap-4 justify-center'>
+                            <Image
+                              src='/img/daylog/screenshot-ios1.png'
+                              alt='데이로그 앱 스크린샷 1'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                            <Image
+                              src='/img/daylog/screenshot-ios2.png'
+                              alt='데이로그 앱 스크린샷 2'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                            <Image
+                              src='/img/daylog/screenshot-ios3.png'
+                              alt='데이로그 앱 스크린샷 3'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                            <Image
+                              src='/img/daylog/screenshot-ios4.png'
+                              alt='데이로그 앱 스크린샷 4'
+                              width={160}
+                              height={160}
+                              className='flex-none rounded-2xl border border-slate-200 shadow-sm'
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
